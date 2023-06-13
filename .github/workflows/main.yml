@@ -1,0 +1,89 @@
+import pygame
+import time
+
+pygame.init()
+
+# Definindo as dimensões da tela
+largura_tela = 800
+altura_tela = 600
+
+# Definindo as cores
+branco = (255, 255, 255)
+preto = (0, 0, 0)
+vermelho = (255, 0, 0)
+
+# Criando a janela do jogo
+tela = pygame.display.set_mode((largura_tela, altura_tela))
+pygame.display.set_caption('Snake')
+
+# Função para desenhar a cobra na tela
+def desenhar_cobra(corpo_cobra):
+    for posicao in corpo_cobra:
+        pygame.draw.rect(tela, preto, [posicao[0], posicao[1], 10, 10])
+
+# Função principal do jogo
+def jogo_snake():
+    fim_jogo = False
+    fim_jogo = False
+
+    # Posição inicial da cobra
+    posicao_x = largura_tela / 2
+    posicao_y = altura_tela / 2
+
+    # Velocidade da cobra
+    velocidade_x = 0
+    velocidade_y = 0
+
+    # Corpo da cobra
+    corpo_cobra = []
+    comprimento_cobra = 1
+
+    while not fim_jogo:
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                fim_jogo = True
+            if evento.type == pygame.KEYDOWN:
+                if evento.key == pygame.K_LEFT:
+                    velocidade_x = -10
+                    velocidade_y = 0
+                elif evento.key == pygame.K_RIGHT:
+                    velocidade_x = 10
+                    velocidade_y = 0
+                elif evento.key == pygame.K_UP:
+                    velocidade_y = -10
+                    velocidade_x = 0
+                elif evento.key == pygame.K_DOWN:
+                    velocidade_y = 10
+                    velocidade_x = 0
+
+        if posicao_x >= largura_tela or posicao_x < 0 or posicao_y >= altura_tela or posicao_y < 0:
+            fim_jogo = True
+
+        posicao_x += velocidade_x
+        posicao_y += velocidade_y
+        tela.fill(branco)
+        pygame.draw.rect(tela, vermelho, [posicao_x, posicao_y, 10, 10])
+
+        cabeca_cobra = []
+        cabeca_cobra.append(posicao_x)
+        cabeca_cobra.append(posicao_y)
+        corpo_cobra.append(cabeca_cobra)
+
+        if len(corpo_cobra) > comprimento_cobra:
+            del corpo_cobra[0]
+
+        for segmento in corpo_cobra[:-1]:
+            if segmento == cabeca_cobra:
+                fim_jogo = True
+
+        desenhar_cobra(corpo_cobra)
+
+        pygame.display.update()
+
+        # Taxa de atualização da tela (FPS)
+        pygame.time.Clock().tick(15)
+
+    pygame.quit()
+
+# Executando o jogo
+jogo_snake()
