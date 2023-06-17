@@ -6,8 +6,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ###
-- 🔭 Atualmente, estou me dedicando aos meus estudos e aprimorando minhas habilidades.
-- 🌱 Testes Manuais e Testes de Integração.
+- Atualmente, estou me dedicando aos meus estudos e aprimorando minhas habilidades.
+- Testes Manuais e Testes de Integração.
 - Automação com Python e Java.
 - Utilizo: JMeter, Postman, Selenium, LoadRunner, Appium, Cypress.
 - Para teste de stress: JUnit, NUnit, TestNG, PyTest.
@@ -22,6 +22,6 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-- 🤔 Aberta a colaborações e pronta para ajudar. Se precisar de ajuda ou quiser discutir ideias, sinta-se à vontade para entrar em contato!
+- Aberta a colaborações e pronta para ajudar. Se precisar de ajuda ou quiser discutir ideias, sinta-se à vontade para entrar em contato!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manuela-ramos-81ba9a264/)
