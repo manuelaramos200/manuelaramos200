@@ -1,7 +1,7 @@
 import math
 
 
-def calcTintas(latas):
+def calcTintas(area):
     litros = (area / 6) * 1.1
     latas = math.ceil(litros/18)
     custo = latas * 80
@@ -10,7 +10,7 @@ def calcTintas(latas):
     print('-' * 40)
 
 
-def calcG(galoes):
+def calcG(area):
     litros = (area / 6) * 1.1
     galoes = math.ceil(litros/3.6)
     custo = galoes * 25
@@ -19,7 +19,7 @@ def calcG(galoes):
     print('-' * 40)
 
 
-def calcP(potes):
+def calcP(area):
     litros = (area / 6) * 1.1
     potes = math.ceil(litros/2.4)
     custo = potes * 18
